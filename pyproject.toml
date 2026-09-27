@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sentinelbot"
+version = "1.0.0"
+description = "Enterprise Python Automation Capstone Project - Automated PDF Report & Real-Time Telemetry Generator"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "reportlab>=4.0.0",
+    "requests>=2.31.0",
+    "schedule>=1.2.0"
+]
+
+[project.scripts]
+sentinelbot = "sentinelbot.main:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
